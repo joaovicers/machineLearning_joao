@@ -1,0 +1,88 @@
+
+            #call c_finder
+            pred_c = load_model(seqs_c_,model_c_name)
+            c_pos_=[]
+            c_cands_=[]
+            c_pred =[]  
+            for pred,seq_c in zip(pred_c,seqs_c):
+                if pred > 0:
+                    c_pos_.append(int(seq_c[0]))
+                    c_cands_.append(seq_c[1])
+                    c_pred.append(pred)
+            boxes_c = zip(c_pos_,c_cands_,c_pred)
+            
+            #2)d_finder
+            d_pos=[]
+            d_cands=[]
+            for j in xrange(10,len(nts)-7):  #D box candidates
+                d_pos.append(str(j))
+                d_cands.append(nts[j-1-window_d:j+3+window_d])
+            seqs_d = izip(d_pos,d_cands)
+
+            seqs_d,seqs_d_ = tee(seqs_d)
+            #call d_finder
+            pred_d = load_model(seqs_d_,model_d_name)
+
+            d_pos_=[]
+            d_cands_=[]
+            d_pred =[]
+            for pred,seq_d in zip(pred_d,seqs_d):
+                if pred > 0:
+                    d_pos_.append(int(seq_d[0]))
+                    d_cands_.append(seq_d[1])
+                    d_pred.append(pred)
+            boxes_d = zip(d_pos_,d_cands_,d_pred)
+
+            #3)Create all pairs of CD of a single sequence
+
+            pos_cs=[]
+            pos_ds=[]
+            cand_cs=[]
+            cand_ds=[]
+            pred_cs=[]
+            pred_ds=[]
+
+            for pos_c,cand_c,pred_c in boxes_c:  
+                for pos_d,cand_d,pred_d in boxes_d:
+                    if (int(pos_d) > (int(pos_c)+7+3)) and (int(pos_d) - int(pos_c) < 260) :
+                         pos_cs.append(pos_c)
+                         cand_cs.append(cand_c)
+                         pred_cs.append(pred_c)
+                         pos_ds.append(pos_d)
+                         cand_ds.append(cand_d)
+                         pred_ds.append(pred_d)
+            boxes_cd = zip(pos_cs,cand_cs,pred_cs,pos_ds,cand_ds,pred_ds)
+
+            
+        #4) Get the stem region
+            stem_cands=[]
+            stem_c_pos=[]
+            stem_d_pos=[]
+            for pos_c,cand_c,pred_c,pos_d,cand_d,pred_d in boxes_cd:
+                if ( int(pos_c) - 10 < 0):
+                    if (int(pos_d)+10 > len(nts)):
+                        stem_cands.append(nts[0:int(pos_c)+6]+"&"+nts[int(pos_d)-1:len(nts)])
+                    else:
+                        stem_cands.append(nts[0:int(pos_c)+6]+"&"+nts[int(pos_d)-1:int(pos_d)+3+10])
+                else:
+                    if (int(pos_d)+10 > len(nts)):
+                        stem_cands.append(nts[int(pos_c)-10:int(pos_c)+6]+"&"+nts[int(pos_d)-1:len(nts)])
+                    else:
+                        stem_cands.append(nts[int(pos_c)-10:int(pos_c)+6]+"&"+nts[int(pos_d)-1:int(pos_d)+3+10])
+                stem_c_pos.append(pos_c)
+                stem_d_pos.append(pos_d)
+            
+            stem_cds = zip(stem_c_pos,stem_d_pos,stem_cands)
+            yield h,true_c,true_d,stem_cds
+            
+            
+  for seq,pred in reversed(sorted(seqs_c_pred,key =  lambda predic: predic[1] )):
+			print i,"\t",seq[0][0:10],"\t",seq[1],"\t",pred
+			i+=1
+
+
+i=1
+        for seq,pred in reversed(sorted(seqs_d_pred,key =  lambda predic: predic[1] )):
+			print i,"\t",seq[0][0][0][0:10],"\t",seq[1],"\t",pred
+			i+=1
+        
