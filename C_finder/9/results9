@@ -1,0 +1,78 @@
+training pos  6601
+training neg  26406
+test pos  2830
+test neg  11318
+/usr/local/lib/python2.7/dist-packages/numpy/core/fromnumeric.py:2507: VisibleDeprecationWarning: `rank` is deprecated; use the `ndim` attribute or function instead. To find the rank of a matrix see `numpy.linalg.matrix_rank`.
+  VisibleDeprecationWarning)
+/usr/local/lib/python2.7/dist-packages/numpy/core/fromnumeric.py:2507: VisibleDeprecationWarning: `rank` is deprecated; use the `ndim` attribute or function instead. To find the rank of a matrix see `numpy.linalg.matrix_rank`.
+  VisibleDeprecationWarning)
+/usr/local/lib/python2.7/dist-packages/numpy/core/fromnumeric.py:2507: VisibleDeprecationWarning: `rank` is deprecated; use the `ndim` attribute or function instead. To find the rank of a matrix see `numpy.linalg.matrix_rank`.
+  VisibleDeprecationWarning)
+/usr/local/lib/python2.7/dist-packages/numpy/core/fromnumeric.py:2507: VisibleDeprecationWarning: `rank` is deprecated; use the `ndim` attribute or function instead. To find the rank of a matrix see `numpy.linalg.matrix_rank`.
+  VisibleDeprecationWarning)
+No handlers could be found for logger "eden.model"
+
+	Model parameters:
+
+Pre_processor:
+
+
+Vectorizer:
+complexity: 3
+
+Estimator:
+     alpha: 1e-07
+      eta0: 0.001
+  l1_ratio: 0.394251381908
+learning_rate: optimal
+      loss: log
+    n_iter: 90
+    n_jobs: 3
+   penalty: l1
+   power_t: 0.336439766377
+
+Parameters:
+
+	Model parameters:
+
+Pre_processor:
+
+
+Vectorizer:
+complexity: 3
+
+Estimator:
+     alpha: 1e-07
+      eta0: 0.001
+  l1_ratio: 0.394251381908
+learning_rate: optimal
+      loss: log
+    n_iter: 90
+    n_jobs: 3
+   penalty: l1
+   power_t: 0.336439766377
+
+Classifier:
+SGDClassifier(alpha=1e-07, average=True, class_weight='auto', epsilon=0.1,
+       eta0=0.001, fit_intercept=True, l1_ratio=0.39425138190763576,
+       learning_rate='optimal', loss='log', n_iter=90, n_jobs=3,
+       penalty='l1', power_t=0.33643976637743955, random_state=None,
+       shuffle=True, verbose=0, warm_start=False)
+
+Data:
+Instances: 14148 ; Features: 1048577 with an avg of 192 features per instance
+
+Predictive performace estimate:
+             precision    recall  f1-score   support
+
+         -1       1.00      1.00      1.00     11318
+          1       0.99      1.00      0.99      2830
+
+avg / total       1.00      1.00      1.00     14148
+
+ACC: 0.998
+FSC: 0.995
+APR: 0.999
+ROC: 1.000
+RSS: 26.99
+avg RSS: 0.001907

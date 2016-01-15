@@ -28,7 +28,7 @@ f = open(test_file)
 y_t = list()
 for y in f:
 	if ((y[0] == '0') or (y[0] == '-')):	
-		y_t.append(-1)
+		y_t.append(0)
 	elif (y[0] == '1'):
 	
 		y_t.append(int(y[0]))

@@ -1,0 +1,793 @@
+training:  CD_sim_frontier1_dataset1.fa
+test:  CD_sim_frontier1_dataset2.fa
+Cmodel:  /home/joaovicers/EDeN_snoRNA_Finder/C_finder/6/Cmodel1
+Dmodel:  /home/joaovicers/EDeN_snoRNA_Finder/D_finder/6/Dmodel6
+stemModel dat1/6/stem_model
+/usr/local/lib/python2.7/dist-packages/numpy/core/fromnumeric.py:2507: VisibleDeprecationWarning: `rank` is deprecated; use the `ndim` attribute or function instead. To find the rank of a matrix see `numpy.linalg.matrix_rank`.
+  VisibleDeprecationWarning)
+/usr/local/lib/python2.7/dist-packages/numpy/core/fromnumeric.py:2507: VisibleDeprecationWarning: `rank` is deprecated; use the `ndim` attribute or function instead. To find the rank of a matrix see `numpy.linalg.matrix_rank`.
+  VisibleDeprecationWarning)
+/usr/local/lib/python2.7/dist-packages/numpy/core/fromnumeric.py:2507: VisibleDeprecationWarning: `rank` is deprecated; use the `ndim` attribute or function instead. To find the rank of a matrix see `numpy.linalg.matrix_rank`.
+  VisibleDeprecationWarning)
+/usr/local/lib/python2.7/dist-packages/numpy/core/fromnumeric.py:2507: VisibleDeprecationWarning: `rank` is deprecated; use the `ndim` attribute or function instead. To find the rank of a matrix see `numpy.linalg.matrix_rank`.
+  VisibleDeprecationWarning)
+test dataset =  CD_sim_frontier1_dataset2.fa 
+
+DEBUG:eden.model:
+
+	Parameters range:
+
+Pre_processor:
+energy_range: [3, 4, 5, 6, 7, 8, 9, 10]
+   max_num: [3, 4, 5, 6, 7, 8]
+max_num_subopts: [134 102 136 188 177 145 197 130 102 148 121 112 111 159 151 179 129 142
+ 179 177 164 133 176 121 187 154 171 138 166 165 149 151 167 154 106 103
+ 129 110 157 132 144 199 194 167 106 190 171 115 135 122 172 182 196 134
+ 104 166 106 103 194 135]
+
+Vectorizer:
+complexity: [2, 3]
+
+Estimator:
+     alpha: [1e-08, 1e-07, 1e-06, 1e-05, 0.0001, 0.001, 0.01, 0.1]
+      eta0: [0.0001, 0.001, 0.01]
+  l1_ratio: [ 0.86850678  0.24789217  0.35663594  0.6067629   0.84451369  0.44885735
+  0.85509576  0.22892047  0.19054857  0.36683963  0.57992473  0.40298682
+  0.83266488  0.40465009  0.58576139  0.5661854   0.51076579  0.63939628
+  0.31109072  0.74315384  0.75451362  0.48626806  0.10667339  0.85034094
+  0.49048213  0.32597586  0.82401872  0.73521792  0.89764214  0.8312897
+  0.5654131   0.72720623  0.85700252  0.24125112  0.21216583  0.40689291
+  0.42386316  0.27342164  0.11518548  0.3213653   0.86711426  0.51568719
+  0.79972013  0.66540808  0.24576805  0.74362914  0.12737863  0.67219827
+  0.81695106  0.19987306  0.18690003  0.53168911  0.60895979  0.74290284
+  0.12600692  0.75767179  0.52834249  0.28740367  0.74716249  0.62814173]
+learning_rate: ['invscaling', 'constant', 'optimal']
+      loss: ['log']
+    n_iter: [14 44 30 36 34 14 93 85 28 10 66 93 97 21 75 69 55 37 36 98 20 43 30 72 22
+ 79 72 64 43 90 32 14 75 60 69 31 68 47 62 15 80 32 30 48 40 32 50 99 80 41
+ 89 34 49 16 39 75 23 75 76 94]
+    n_jobs: [4]
+   penalty: ['l1', 'l2', 'elasticnet']
+   power_t: [ 0.39866743  0.16582142  0.78785502  0.18714173  0.62963214  0.69683622
+  0.48052809  0.99234531  0.75955447  0.64016835  0.87109004  0.61128717
+  0.88375714  0.29058535  0.24421073  0.41127576  0.64076853  0.17915107
+  0.49461419  0.29019876  0.47859735  0.75066715  0.20644328  0.80134726
+  0.78244336  0.60225664  0.28699039  0.81223249  0.8972554   0.13608772
+  0.70731743  0.33371193  0.6127502   0.60506317  0.74840862  0.8100995
+  0.50607684  0.15842052  0.86611283  0.54006489  0.11718994  0.7122318
+  0.68088903  0.24172385  0.10908477  0.25372459  0.67592817  0.46964314
+  0.34061969  0.6508386   0.83189671  0.23239148  0.91274243  0.50296549
+  0.17442292  0.48808661  0.32973855  0.75414143  0.94563786  0.69344737]
+Positive training samples:  441
+Negative training samples:  1764
+--------
+Positive test samples:  213
+Negative test samples:  852
+DEBUG:eden.model:iteration: (1/5) 1/60 score (roc_auc): -0.014 (0.008 +- 0.011)
+DEBUG:eden.model:iteration: (2/5) 1/60 score (roc_auc): 0.982 (0.996 +- 0.007)
+INFO:eden.model:
+
+	Iteration: 1/60 (after 76.6 sec; 0:01:16.610734)
+Best score (roc_auc): 0.982 (0.996 +- 0.007)
+
+Data:
+Instances: 2205 ; Features: 1048577 with an avg of 305 features
+class: 1 count:441 (0.20)	class: -1 count:1764 (0.80)	
+
+	Model parameters:
+
+Pre_processor:
+energy_range: 3
+   max_num: 3
+max_num_subopts: 134
+
+Vectorizer:
+complexity: 2
+
+Estimator:
+     alpha: 1e-05
+      eta0: 0.0001
+  l1_ratio: 0.404650085631
+learning_rate: optimal
+      loss: log
+    n_iter: 89
+    n_jobs: 4
+   penalty: l1
+   power_t: 0.253724593959
+DEBUG:eden.model:iteration: (3/5) 1/60 score (roc_auc): 0.970 (0.992 +- 0.011)
+DEBUG:eden.model:iteration: (4/5) 1/60 score (roc_auc): 0.971 (0.992 +- 0.011)
+DEBUG:eden.model:iteration: (5/5) 1/60 score (roc_auc): 0.142 (0.252 +- 0.055)
+DEBUG:eden.model:iteration: (1/5) 2/60 score (roc_auc): 0.975 (0.989 +- 0.007)
+DEBUG:eden.model:iteration: (2/5) 2/60 score (roc_auc): 0.986 (0.996 +- 0.005)
+INFO:eden.model:
+
+	Iteration: 2/60 (after 313.4 sec; 0:05:13.449123)
+Best score (roc_auc): 0.986 (0.996 +- 0.005)
+
+Data:
+Instances: 2205 ; Features: 1048577 with an avg of 1284 features
+class: 1 count:441 (0.20)	class: -1 count:1764 (0.80)	
+
+	Model parameters:
+
+Pre_processor:
+energy_range: 6
+   max_num: 7
+max_num_subopts: 106
+
+Vectorizer:
+complexity: 3
+
+Estimator:
+     alpha: 1e-07
+      eta0: 0.01
+  l1_ratio: 0.824018721619
+learning_rate: constant
+      loss: log
+    n_iter: 22
+    n_jobs: 4
+   penalty: elasticnet
+   power_t: 0.612750197042
+DEBUG:eden.model:iteration: (3/5) 2/60 score (roc_auc): 0.981 (0.993 +- 0.006)
+DEBUG:eden.model:iteration: (4/5) 2/60 score (roc_auc): 0.987 (0.996 +- 0.005)
+INFO:eden.model:
+
+	Iteration: 2/60 (after 367.0 sec; 0:06:07.004059)
+Best score (roc_auc): 0.987 (0.996 +- 0.005)
+
+Data:
+Instances: 2205 ; Features: 1048577 with an avg of 1284 features
+class: 1 count:441 (0.20)	class: -1 count:1764 (0.80)	
+
+	Model parameters:
+
+Pre_processor:
+energy_range: 6
+   max_num: 7
+max_num_subopts: 106
+
+Vectorizer:
+complexity: 3
+
+Estimator:
+     alpha: 0.0001
+      eta0: 0.01
+  l1_ratio: 0.404650085631
+learning_rate: constant
+      loss: log
+    n_iter: 66
+    n_jobs: 4
+   penalty: l2
+   power_t: 0.945637864651
+DEBUG:eden.model:iteration: (5/5) 2/60 score (roc_auc): 0.979 (0.992 +- 0.007)
+DEBUG:eden.model:iteration: (1/5) 3/60 score (roc_auc): 0.982 (0.994 +- 0.006)
+DEBUG:eden.model:iteration: (2/5) 3/60 score (roc_auc): 0.981 (0.994 +- 0.006)
+DEBUG:eden.model:iteration: (3/5) 3/60 score (roc_auc): -0.008 (0.007 +- 0.008)
+DEBUG:eden.model:iteration: (4/5) 3/60 score (roc_auc): 0.980 (0.994 +- 0.007)
+DEBUG:eden.model:iteration: (5/5) 3/60 score (roc_auc): 0.327 (0.448 +- 0.061)
+DEBUG:eden.model:iteration: (1/5) 4/60 score (roc_auc): -0.011 (0.008 +- 0.009)
+DEBUG:eden.model:iteration: (2/5) 4/60 score (roc_auc): 0.979 (0.995 +- 0.008)
+DEBUG:eden.model:iteration: (3/5) 4/60 score (roc_auc): 0.980 (0.995 +- 0.008)
+DEBUG:eden.model:iteration: (4/5) 4/60 score (roc_auc): 0.462 (0.579 +- 0.059)
+DEBUG:eden.model:iteration: (5/5) 4/60 score (roc_auc): 0.979 (0.995 +- 0.008)
+DEBUG:eden.model:iteration: (1/5) 5/60 score (roc_auc): 0.981 (0.993 +- 0.006)
+DEBUG:eden.model:iteration: (2/5) 5/60 score (roc_auc): -0.005 (0.007 +- 0.006)
+DEBUG:eden.model:iteration: (3/5) 5/60 score (roc_auc): 0.986 (0.997 +- 0.005)
+DEBUG:eden.model:iteration: (4/5) 5/60 score (roc_auc): 0.978 (0.991 +- 0.006)
+DEBUG:eden.model:iteration: (5/5) 5/60 score (roc_auc): 0.993 (0.999 +- 0.003)
+INFO:eden.model:
+
+	Iteration: 5/60 (after 1438.4 sec; 0:23:58.438373)
+Best score (roc_auc): 0.993 (0.999 +- 0.003)
+
+Data:
+Instances: 2205 ; Features: 1048577 with an avg of 358 features
+class: 1 count:441 (0.20)	class: -1 count:1764 (0.80)	
+
+	Model parameters:
+
+Pre_processor:
+energy_range: 6
+   max_num: 4
+max_num_subopts: 144
+
+Vectorizer:
+complexity: 2
+
+Estimator:
+     alpha: 1e-07
+      eta0: 0.0001
+  l1_ratio: 0.531689110882
+learning_rate: optimal
+      loss: log
+    n_iter: 16
+    n_jobs: 4
+   penalty: elasticnet
+   power_t: 0.605063174152
+DEBUG:eden.model:iteration: (1/5) 6/60 score (roc_auc): 0.979 (0.993 +- 0.007)
+DEBUG:eden.model:iteration: (2/5) 6/60 score (roc_auc): -0.007 (0.007 +- 0.007)
+DEBUG:eden.model:iteration: (3/5) 6/60 score (roc_auc): 0.972 (0.994 +- 0.011)
+DEBUG:eden.model:iteration: (4/5) 6/60 score (roc_auc): 0.979 (0.993 +- 0.007)
+DEBUG:eden.model:iteration: (5/5) 6/60 score (roc_auc): 0.978 (0.996 +- 0.009)
+DEBUG:eden.model:iteration: (1/5) 7/60 score (roc_auc): 0.960 (0.974 +- 0.007)
+DEBUG:eden.model:iteration: (2/5) 7/60 score (roc_auc): 0.974 (0.993 +- 0.010)
+DEBUG:eden.model:iteration: (3/5) 7/60 score (roc_auc): -0.013 (0.007 +- 0.010)
+DEBUG:eden.model:iteration: (4/5) 7/60 score (roc_auc): 0.989 (0.998 +- 0.005)
+DEBUG:eden.model:iteration: (5/5) 7/60 score (roc_auc): 0.992 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (1/5) 8/60 score (roc_auc): 0.992 (0.999 +- 0.004)
+DEBUG:eden.model:iteration: (2/5) 8/60 score (roc_auc): -0.008 (0.004 +- 0.006)
+DEBUG:eden.model:iteration: (3/5) 8/60 score (roc_auc): 0.986 (0.996 +- 0.005)
+DEBUG:eden.model:iteration: (4/5) 8/60 score (roc_auc): 0.983 (0.994 +- 0.006)
+DEBUG:eden.model:iteration: (5/5) 8/60 score (roc_auc): 0.981 (0.993 +- 0.006)
+DEBUG:eden.model:iteration: (1/5) 9/60 score (roc_auc): 0.989 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (2/5) 9/60 score (roc_auc): 0.078 (0.113 +- 0.018)
+DEBUG:eden.model:iteration: (3/5) 9/60 score (roc_auc): 0.097 (0.135 +- 0.019)
+DEBUG:eden.model:iteration: (4/5) 9/60 score (roc_auc): 0.966 (0.984 +- 0.009)
+DEBUG:eden.model:iteration: (5/5) 9/60 score (roc_auc): 0.984 (0.997 +- 0.007)
+DEBUG:eden.model:iteration: (1/5) 10/60 score (roc_auc): -0.006 (0.007 +- 0.007)
+DEBUG:eden.model:iteration: (2/5) 10/60 score (roc_auc): 0.980 (0.993 +- 0.006)
+DEBUG:eden.model:iteration: (3/5) 10/60 score (roc_auc): 0.983 (0.994 +- 0.006)
+DEBUG:eden.model:iteration: (4/5) 10/60 score (roc_auc): 0.980 (0.992 +- 0.006)
+DEBUG:eden.model:iteration: (5/5) 10/60 score (roc_auc): -0.009 (0.005 +- 0.007)
+DEBUG:eden.model:iteration: (1/5) 11/60 score (roc_auc): 0.974 (0.992 +- 0.009)
+DEBUG:eden.model:iteration: (2/5) 11/60 score (roc_auc): 0.971 (0.993 +- 0.011)
+DEBUG:eden.model:iteration: (3/5) 11/60 score (roc_auc): 0.972 (0.993 +- 0.011)
+DEBUG:eden.model:iteration: (4/5) 11/60 score (roc_auc): 0.819 (0.883 +- 0.032)
+DEBUG:eden.model:iteration: (5/5) 11/60 score (roc_auc): 0.974 (0.992 +- 0.009)
+DEBUG:eden.model:iteration: (1/5) 12/60 score (roc_auc): 0.944 (0.964 +- 0.010)
+DEBUG:eden.model:iteration: (2/5) 12/60 score (roc_auc): -0.011 (0.007 +- 0.009)
+DEBUG:eden.model:iteration: (3/5) 12/60 score (roc_auc): 0.992 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (4/5) 12/60 score (roc_auc): 0.984 (0.996 +- 0.006)
+DEBUG:eden.model:iteration: (5/5) 12/60 score (roc_auc): 0.980 (0.994 +- 0.007)
+DEBUG:eden.model:iteration: (1/5) 13/60 score (roc_auc): 0.992 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (2/5) 13/60 score (roc_auc): -0.013 (0.006 +- 0.010)
+DEBUG:eden.model:iteration: (3/5) 13/60 score (roc_auc): 0.978 (0.995 +- 0.008)
+DEBUG:eden.model:iteration: (4/5) 13/60 score (roc_auc): 0.993 (0.999 +- 0.003)
+INFO:eden.model:
+
+	Iteration: 13/60 (after 4405.6 sec; 1:13:25.593464)
+Best score (roc_auc): 0.993 (0.999 +- 0.003)
+
+Data:
+Instances: 2205 ; Features: 1048577 with an avg of 1109 features
+class: 1 count:441 (0.20)	class: -1 count:1764 (0.80)	
+
+	Model parameters:
+
+Pre_processor:
+energy_range: 4
+   max_num: 6
+max_num_subopts: 106
+
+Vectorizer:
+complexity: 3
+
+Estimator:
+     alpha: 1e-06
+      eta0: 0.0001
+  l1_ratio: 0.486268055271
+learning_rate: optimal
+      loss: log
+    n_iter: 68
+    n_jobs: 4
+   penalty: elasticnet
+   power_t: 0.33371193268
+DEBUG:eden.model:iteration: (5/5) 13/60 score (roc_auc): 0.842 (0.877 +- 0.018)
+DEBUG:eden.model:iteration: (1/5) 14/60 score (roc_auc): -0.007 (0.009 +- 0.008)
+DEBUG:eden.model:iteration: (2/5) 14/60 score (roc_auc): 0.978 (0.991 +- 0.006)
+DEBUG:eden.model:iteration: (3/5) 14/60 score (roc_auc): 0.984 (0.996 +- 0.006)
+DEBUG:eden.model:iteration: (4/5) 14/60 score (roc_auc): 0.967 (0.984 +- 0.009)
+DEBUG:eden.model:iteration: (5/5) 14/60 score (roc_auc): 0.687 (0.741 +- 0.027)
+DEBUG:eden.model:iteration: (1/5) 15/60 score (roc_auc): 0.983 (0.993 +- 0.005)
+DEBUG:eden.model:iteration: (2/5) 15/60 score (roc_auc): 0.981 (0.992 +- 0.006)
+DEBUG:eden.model:iteration: (3/5) 15/60 score (roc_auc): 0.983 (0.993 +- 0.005)
+DEBUG:eden.model:iteration: (4/5) 15/60 score (roc_auc): 0.986 (0.995 +- 0.005)
+DEBUG:eden.model:iteration: (5/5) 15/60 score (roc_auc): 0.981 (0.992 +- 0.006)
+DEBUG:eden.model:iteration: (1/5) 16/60 score (roc_auc): 0.974 (0.993 +- 0.009)
+DEBUG:eden.model:iteration: (2/5) 16/60 score (roc_auc): 0.975 (0.993 +- 0.009)
+DEBUG:eden.model:iteration: (3/5) 16/60 score (roc_auc): 0.978 (0.996 +- 0.009)
+DEBUG:eden.model:iteration: (4/5) 16/60 score (roc_auc): -0.018 (0.007 +- 0.013)
+DEBUG:eden.model:iteration: (5/5) 16/60 score (roc_auc): 0.975 (0.993 +- 0.009)
+DEBUG:eden.model:iteration: (1/5) 17/60 score (roc_auc): 0.982 (0.994 +- 0.006)
+DEBUG:eden.model:iteration: (2/5) 17/60 score (roc_auc): -0.006 (0.006 +- 0.006)
+DEBUG:eden.model:iteration: (3/5) 17/60 score (roc_auc): 0.986 (0.996 +- 0.005)
+DEBUG:eden.model:iteration: (4/5) 17/60 score (roc_auc): 0.984 (0.995 +- 0.006)
+DEBUG:eden.model:iteration: (5/5) 17/60 score (roc_auc): 0.986 (0.995 +- 0.005)
+DEBUG:eden.model:iteration: (1/5) 18/60 score (roc_auc): 0.973 (0.994 +- 0.011)
+DEBUG:eden.model:iteration: (2/5) 18/60 score (roc_auc): 0.971 (0.993 +- 0.011)
+DEBUG:eden.model:iteration: (3/5) 18/60 score (roc_auc): 0.975 (0.995 +- 0.010)
+DEBUG:eden.model:iteration: (4/5) 18/60 score (roc_auc): 0.768 (0.841 +- 0.036)
+DEBUG:eden.model:iteration: (5/5) 18/60 score (roc_auc): 0.975 (0.995 +- 0.010)
+DEBUG:eden.model:iteration: (1/5) 19/60 score (roc_auc): 0.979 (0.993 +- 0.007)
+DEBUG:eden.model:iteration: (2/5) 19/60 score (roc_auc): 0.985 (0.996 +- 0.005)
+DEBUG:eden.model:iteration: (3/5) 19/60 score (roc_auc): -0.009 (0.005 +- 0.007)
+DEBUG:eden.model:iteration: (4/5) 19/60 score (roc_auc): 0.992 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (5/5) 19/60 score (roc_auc): 0.982 (0.993 +- 0.006)
+DEBUG:eden.model:iteration: (1/5) 20/60 score (roc_auc): 0.990 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (2/5) 20/60 score (roc_auc): 0.982 (0.994 +- 0.006)
+DEBUG:eden.model:iteration: (3/5) 20/60 score (roc_auc): 0.979 (0.993 +- 0.007)
+DEBUG:eden.model:iteration: (4/5) 20/60 score (roc_auc): 0.979 (0.993 +- 0.007)
+DEBUG:eden.model:iteration: (5/5) 20/60 score (roc_auc): 0.979 (0.993 +- 0.007)
+DEBUG:eden.model:iteration: (1/5) 21/60 score (roc_auc): 0.989 (0.997 +- 0.004)
+DEBUG:eden.model:iteration: (2/5) 21/60 score (roc_auc): 0.976 (0.991 +- 0.007)
+DEBUG:eden.model:iteration: (3/5) 21/60 score (roc_auc): 0.979 (0.992 +- 0.006)
+DEBUG:eden.model:iteration: (4/5) 21/60 score (roc_auc): 0.983 (0.994 +- 0.005)
+DEBUG:eden.model:iteration: (5/5) 21/60 score (roc_auc): 0.992 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (1/5) 22/60 score (roc_auc): 0.981 (0.993 +- 0.006)
+DEBUG:eden.model:iteration: (2/5) 22/60 score (roc_auc): 0.976 (0.991 +- 0.008)
+DEBUG:eden.model:iteration: (3/5) 22/60 score (roc_auc): 0.982 (0.993 +- 0.006)
+DEBUG:eden.model:iteration: (4/5) 22/60 score (roc_auc): 0.977 (0.992 +- 0.007)
+DEBUG:eden.model:iteration: (5/5) 22/60 score (roc_auc): 0.980 (0.992 +- 0.006)
+DEBUG:eden.model:iteration: (1/5) 23/60 score (roc_auc): -0.005 (0.006 +- 0.005)
+DEBUG:eden.model:iteration: (2/5) 23/60 score (roc_auc): 0.983 (0.992 +- 0.005)
+DEBUG:eden.model:iteration: (3/5) 23/60 score (roc_auc): 0.986 (0.994 +- 0.004)
+DEBUG:eden.model:iteration: (4/5) 23/60 score (roc_auc): 0.992 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (5/5) 23/60 score (roc_auc): 0.690 (0.745 +- 0.027)
+DEBUG:eden.model:iteration: (1/5) 24/60 score (roc_auc): 0.981 (0.993 +- 0.006)
+DEBUG:eden.model:iteration: (2/5) 24/60 score (roc_auc): -0.005 (0.008 +- 0.007)
+DEBUG:eden.model:iteration: (3/5) 24/60 score (roc_auc): 0.980 (0.993 +- 0.006)
+DEBUG:eden.model:iteration: (4/5) 24/60 score (roc_auc): 0.988 (0.997 +- 0.005)
+DEBUG:eden.model:iteration: (5/5) 24/60 score (roc_auc): 0.982 (0.993 +- 0.006)
+DEBUG:eden.model:iteration: (1/5) 25/60 score (roc_auc): 0.983 (0.995 +- 0.006)
+DEBUG:eden.model:iteration: (2/5) 25/60 score (roc_auc): 0.982 (0.994 +- 0.006)
+DEBUG:eden.model:iteration: (3/5) 25/60 score (roc_auc): 0.974 (0.992 +- 0.009)
+DEBUG:eden.model:iteration: (4/5) 25/60 score (roc_auc): 0.983 (0.995 +- 0.006)
+DEBUG:eden.model:iteration: (5/5) 25/60 score (roc_auc): 0.981 (0.994 +- 0.006)
+DEBUG:eden.model:iteration: (1/5) 26/60 score (roc_auc): 0.611 (0.687 +- 0.038)
+DEBUG:eden.model:iteration: (2/5) 26/60 score (roc_auc): 0.631 (0.705 +- 0.037)
+DEBUG:eden.model:iteration: (3/5) 26/60 score (roc_auc): 0.973 (0.989 +- 0.008)
+DEBUG:eden.model:iteration: (4/5) 26/60 score (roc_auc): 0.975 (0.994 +- 0.010)
+DEBUG:eden.model:iteration: (5/5) 26/60 score (roc_auc): 0.974 (0.994 +- 0.010)
+DEBUG:eden.model:iteration: (1/5) 27/60 score (roc_auc): 0.974 (0.995 +- 0.010)
+DEBUG:eden.model:iteration: (2/5) 27/60 score (roc_auc): 0.974 (0.994 +- 0.010)
+DEBUG:eden.model:iteration: (3/5) 27/60 score (roc_auc): 0.974 (0.994 +- 0.010)
+DEBUG:eden.model:iteration: (4/5) 27/60 score (roc_auc): 0.977 (0.994 +- 0.008)
+DEBUG:eden.model:iteration: (5/5) 27/60 score (roc_auc): 0.985 (0.997 +- 0.006)
+DEBUG:eden.model:iteration: (1/5) 28/60 score (roc_auc): 0.991 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (2/5) 28/60 score (roc_auc): 0.981 (0.993 +- 0.006)
+DEBUG:eden.model:iteration: (3/5) 28/60 score (roc_auc): 0.984 (0.994 +- 0.005)
+DEBUG:eden.model:iteration: (4/5) 28/60 score (roc_auc): -0.006 (0.007 +- 0.006)
+DEBUG:eden.model:iteration: (5/5) 28/60 score (roc_auc): 0.982 (0.993 +- 0.006)
+DEBUG:eden.model:iteration: (1/5) 29/60 score (roc_auc): 0.972 (0.993 +- 0.010)
+DEBUG:eden.model:iteration: (2/5) 29/60 score (roc_auc): -0.005 (0.033 +- 0.019)
+DEBUG:eden.model:iteration: (3/5) 29/60 score (roc_auc): 0.990 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (4/5) 29/60 score (roc_auc): 0.971 (0.992 +- 0.010)
+DEBUG:eden.model:iteration: (5/5) 29/60 score (roc_auc): 0.972 (0.992 +- 0.010)
+DEBUG:eden.model:iteration: (1/5) 30/60 score (roc_auc): 0.984 (0.994 +- 0.005)
+DEBUG:eden.model:iteration: (2/5) 30/60 score (roc_auc): -0.005 (0.008 +- 0.006)
+DEBUG:eden.model:iteration: (3/5) 30/60 score (roc_auc): -0.005 (0.007 +- 0.006)
+DEBUG:eden.model:iteration: (4/5) 30/60 score (roc_auc): 0.981 (0.993 +- 0.006)
+DEBUG:eden.model:iteration: (5/5) 30/60 score (roc_auc): 0.973 (0.990 +- 0.008)
+DEBUG:eden.model:
+
+	Parameters range:
+
+Pre_processor:
+energy_range: [3, 6, 6, 6, 4]
+   max_num: [3, 7, 7, 4, 6]
+max_num_subopts: [134, 106, 106, 144, 106]
+
+Vectorizer:
+complexity: [2, 3, 3, 2, 3]
+
+Estimator:
+     alpha: [1e-05, 1e-07, 0.0001, 1e-07, 1e-06]
+      eta0: [0.0001, 0.01, 0.01, 0.0001, 0.0001]
+  l1_ratio: [0.40465008563093519, 0.82401872161931899, 0.40465008563093519, 0.53168911088218429, 0.48626805527051642]
+learning_rate: ['optimal', 'constant', 'constant', 'optimal', 'optimal']
+      loss: ['log', 'log', 'log', 'log', 'log']
+    n_iter: [89, 22, 66, 16, 68]
+    n_jobs: [4, 4, 4, 4, 4]
+   penalty: ['l1', 'elasticnet', 'l2', 'elasticnet', 'elasticnet']
+   power_t: [0.25372459395859731, 0.61275019704202982, 0.94563786465051947, 0.60506317415231536, 0.33371193267990013]
+DEBUG:eden.model:iteration: (1/5) 31/60 score (roc_auc): 0.974 (0.991 +- 0.008)
+DEBUG:eden.model:iteration: (2/5) 31/60 score (roc_auc): 0.981 (0.993 +- 0.006)
+DEBUG:eden.model:iteration: (3/5) 31/60 score (roc_auc): 0.992 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (4/5) 31/60 score (roc_auc): 0.988 (0.997 +- 0.005)
+DEBUG:eden.model:iteration: (5/5) 31/60 score (roc_auc): 0.988 (0.997 +- 0.005)
+DEBUG:eden.model:iteration: (1/5) 32/60 score (roc_auc): 0.981 (0.993 +- 0.006)
+DEBUG:eden.model:iteration: (2/5) 32/60 score (roc_auc): 0.986 (0.996 +- 0.005)
+DEBUG:eden.model:iteration: (3/5) 32/60 score (roc_auc): 0.801 (0.875 +- 0.037)
+DEBUG:eden.model:iteration: (4/5) 32/60 score (roc_auc): 0.993 (0.998 +- 0.003)
+INFO:eden.model:
+
+	Iteration: 32/60 (after 9091.1 sec; 2:31:31.143465)
+Best score (roc_auc): 0.993 (0.998 +- 0.003)
+
+Data:
+Instances: 2205 ; Features: 1048577 with an avg of 756 features
+class: 1 count:441 (0.20)	class: -1 count:1764 (0.80)	
+
+	Model parameters:
+
+Pre_processor:
+energy_range: 6
+   max_num: 3
+max_num_subopts: 106
+
+Vectorizer:
+complexity: 3
+
+Estimator:
+     alpha: 1e-07
+      eta0: 0.01
+  l1_ratio: 0.824018721619
+learning_rate: optimal
+      loss: log
+    n_iter: 22
+    n_jobs: 4
+   penalty: l1
+   power_t: 0.253724593959
+DEBUG:eden.model:iteration: (5/5) 32/60 score (roc_auc): 0.990 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (1/5) 33/60 score (roc_auc): 0.990 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (2/5) 33/60 score (roc_auc): 0.977 (0.994 +- 0.009)
+DEBUG:eden.model:iteration: (3/5) 33/60 score (roc_auc): 0.990 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (4/5) 33/60 score (roc_auc): 0.990 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (5/5) 33/60 score (roc_auc): 0.977 (0.994 +- 0.009)
+DEBUG:eden.model:iteration: (1/5) 34/60 score (roc_auc): 0.993 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (2/5) 34/60 score (roc_auc): 0.983 (0.993 +- 0.005)
+DEBUG:eden.model:iteration: (3/5) 34/60 score (roc_auc): 0.995 (0.999 +- 0.002)
+INFO:eden.model:
+
+	Iteration: 34/60 (after 9539.5 sec; 2:38:59.488619)
+Best score (roc_auc): 0.995 (0.999 +- 0.002)
+
+Data:
+Instances: 2205 ; Features: 1048577 with an avg of 440 features
+class: 1 count:441 (0.20)	class: -1 count:1764 (0.80)	
+
+	Model parameters:
+
+Pre_processor:
+energy_range: 6
+   max_num: 6
+max_num_subopts: 106
+
+Vectorizer:
+complexity: 2
+
+Estimator:
+     alpha: 1e-07
+      eta0: 0.0001
+  l1_ratio: 0.824018721619
+learning_rate: optimal
+      loss: log
+    n_iter: 66
+    n_jobs: 4
+   penalty: elasticnet
+   power_t: 0.605063174152
+DEBUG:eden.model:iteration: (4/5) 34/60 score (roc_auc): 0.963 (0.984 +- 0.011)
+DEBUG:eden.model:iteration: (5/5) 34/60 score (roc_auc): 0.995 (0.999 +- 0.002)
+INFO:eden.model:
+
+	Iteration: 34/60 (after 9564.7 sec; 2:39:24.676727)
+Best score (roc_auc): 0.995 (0.999 +- 0.002)
+
+Data:
+Instances: 2205 ; Features: 1048577 with an avg of 440 features
+class: 1 count:441 (0.20)	class: -1 count:1764 (0.80)	
+
+	Model parameters:
+
+Pre_processor:
+energy_range: 6
+   max_num: 6
+max_num_subopts: 106
+
+Vectorizer:
+complexity: 2
+
+Estimator:
+     alpha: 1e-06
+      eta0: 0.0001
+  l1_ratio: 0.531689110882
+learning_rate: optimal
+      loss: log
+    n_iter: 16
+    n_jobs: 4
+   penalty: elasticnet
+   power_t: 0.945637864651
+DEBUG:eden.model:iteration: (1/5) 35/60 score (roc_auc): 0.990 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (2/5) 35/60 score (roc_auc): 0.990 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (3/5) 35/60 score (roc_auc): 0.957 (0.978 +- 0.010)
+DEBUG:eden.model:iteration: (4/5) 35/60 score (roc_auc): 0.996 (0.999 +- 0.002)
+INFO:eden.model:
+
+	Iteration: 35/60 (after 9924.2 sec; 2:45:24.183983)
+Best score (roc_auc): 0.996 (0.999 +- 0.002)
+
+Data:
+Instances: 2205 ; Features: 1048577 with an avg of 1109 features
+class: 1 count:441 (0.20)	class: -1 count:1764 (0.80)	
+
+	Model parameters:
+
+Pre_processor:
+energy_range: 4
+   max_num: 6
+max_num_subopts: 106
+
+Vectorizer:
+complexity: 3
+
+Estimator:
+     alpha: 1e-07
+      eta0: 0.01
+  l1_ratio: 0.404650085631
+learning_rate: optimal
+      loss: log
+    n_iter: 89
+    n_jobs: 4
+   penalty: l2
+   power_t: 0.612750197042
+DEBUG:eden.model:iteration: (5/5) 35/60 score (roc_auc): 0.991 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (1/5) 36/60 score (roc_auc): 0.982 (0.994 +- 0.006)
+DEBUG:eden.model:iteration: (2/5) 36/60 score (roc_auc): 0.981 (0.994 +- 0.006)
+DEBUG:eden.model:iteration: (3/5) 36/60 score (roc_auc): 0.986 (0.995 +- 0.005)
+DEBUG:eden.model:iteration: (4/5) 36/60 score (roc_auc): 0.920 (0.958 +- 0.019)
+DEBUG:eden.model:iteration: (5/5) 36/60 score (roc_auc): 0.995 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (1/5) 37/60 score (roc_auc): 0.983 (0.993 +- 0.005)
+DEBUG:eden.model:iteration: (2/5) 37/60 score (roc_auc): 0.992 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (3/5) 37/60 score (roc_auc): 0.990 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (4/5) 37/60 score (roc_auc): 0.983 (0.993 +- 0.005)
+DEBUG:eden.model:iteration: (5/5) 37/60 score (roc_auc): 0.989 (0.997 +- 0.004)
+DEBUG:eden.model:iteration: (1/5) 38/60 score (roc_auc): 0.989 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (2/5) 38/60 score (roc_auc): 0.976 (0.994 +- 0.009)
+DEBUG:eden.model:iteration: (3/5) 38/60 score (roc_auc): 0.993 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (4/5) 38/60 score (roc_auc): 0.978 (0.995 +- 0.008)
+DEBUG:eden.model:iteration: (5/5) 38/60 score (roc_auc): 0.994 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (1/5) 39/60 score (roc_auc): 0.875 (0.931 +- 0.028)
+DEBUG:eden.model:iteration: (2/5) 39/60 score (roc_auc): 0.980 (0.996 +- 0.008)
+DEBUG:eden.model:iteration: (3/5) 39/60 score (roc_auc): 0.976 (0.993 +- 0.009)
+DEBUG:eden.model:iteration: (4/5) 39/60 score (roc_auc): 0.994 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (5/5) 39/60 score (roc_auc): 0.994 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (1/5) 40/60 score (roc_auc): 0.987 (0.996 +- 0.004)
+DEBUG:eden.model:iteration: (2/5) 40/60 score (roc_auc): 0.995 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (3/5) 40/60 score (roc_auc): 0.994 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (4/5) 40/60 score (roc_auc): 0.994 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (5/5) 40/60 score (roc_auc): 0.993 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (1/5) 41/60 score (roc_auc): 0.987 (0.996 +- 0.005)
+DEBUG:eden.model:iteration: (2/5) 41/60 score (roc_auc): 0.993 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (3/5) 41/60 score (roc_auc): 0.993 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (4/5) 41/60 score (roc_auc): 0.993 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (5/5) 41/60 score (roc_auc): 0.993 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (1/5) 42/60 score (roc_auc): 0.992 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (2/5) 42/60 score (roc_auc): 0.992 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (3/5) 42/60 score (roc_auc): 0.993 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (4/5) 42/60 score (roc_auc): 0.983 (0.994 +- 0.005)
+DEBUG:eden.model:iteration: (5/5) 42/60 score (roc_auc): 0.993 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (1/5) 43/60 score (roc_auc): 0.979 (0.995 +- 0.008)
+DEBUG:eden.model:iteration: (2/5) 43/60 score (roc_auc): 0.992 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (3/5) 43/60 score (roc_auc): 0.989 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (4/5) 43/60 score (roc_auc): 0.992 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (5/5) 43/60 score (roc_auc): 0.992 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (1/5) 44/60 score (roc_auc): 0.995 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (2/5) 44/60 score (roc_auc): 0.986 (0.995 +- 0.005)
+DEBUG:eden.model:iteration: (3/5) 44/60 score (roc_auc): 0.994 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (4/5) 44/60 score (roc_auc): 0.994 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (5/5) 44/60 score (roc_auc): 0.995 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (1/5) 45/60 score (roc_auc): 0.993 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (2/5) 45/60 score (roc_auc): 0.992 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (3/5) 45/60 score (roc_auc): 0.991 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (4/5) 45/60 score (roc_auc): 0.989 (0.998 +- 0.005)
+DEBUG:eden.model:iteration: (5/5) 45/60 score (roc_auc): 0.990 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (1/5) 46/60 score (roc_auc): 0.993 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (2/5) 46/60 score (roc_auc): 0.991 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (3/5) 46/60 score (roc_auc): 0.996 (0.999 +- 0.002)
+INFO:eden.model:
+
+	Iteration: 46/60 (after 12655.3 sec; 3:30:55.269443)
+Best score (roc_auc): 0.996 (0.999 +- 0.002)
+
+Data:
+Instances: 2205 ; Features: 1048577 with an avg of 440 features
+class: 1 count:441 (0.20)	class: -1 count:1764 (0.80)	
+
+	Model parameters:
+
+Pre_processor:
+energy_range: 6
+   max_num: 6
+max_num_subopts: 106
+
+Vectorizer:
+complexity: 2
+
+Estimator:
+     alpha: 1e-07
+      eta0: 0.01
+  l1_ratio: 0.531689110882
+learning_rate: optimal
+      loss: log
+    n_iter: 66
+    n_jobs: 4
+   penalty: elasticnet
+   power_t: 0.33371193268
+DEBUG:eden.model:iteration: (4/5) 46/60 score (roc_auc): 0.993 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (5/5) 46/60 score (roc_auc): 0.993 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (1/5) 47/60 score (roc_auc): 0.778 (0.862 +- 0.042)
+DEBUG:eden.model:iteration: (2/5) 47/60 score (roc_auc): 0.994 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (3/5) 47/60 score (roc_auc): 0.994 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (4/5) 47/60 score (roc_auc): 0.994 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (5/5) 47/60 score (roc_auc): 0.994 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (1/5) 48/60 score (roc_auc): 0.975 (0.995 +- 0.010)
+DEBUG:eden.model:iteration: (2/5) 48/60 score (roc_auc): 0.975 (0.994 +- 0.009)
+DEBUG:eden.model:iteration: (3/5) 48/60 score (roc_auc): 0.974 (0.994 +- 0.010)
+DEBUG:eden.model:iteration: (4/5) 48/60 score (roc_auc): 0.984 (0.997 +- 0.007)
+DEBUG:eden.model:iteration: (5/5) 48/60 score (roc_auc): 0.991 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (1/5) 49/60 score (roc_auc): 0.995 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (2/5) 49/60 score (roc_auc): 0.995 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (3/5) 49/60 score (roc_auc): 0.990 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (4/5) 49/60 score (roc_auc): 0.995 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (5/5) 49/60 score (roc_auc): 0.977 (0.994 +- 0.008)
+DEBUG:eden.model:iteration: (1/5) 50/60 score (roc_auc): 0.975 (0.994 +- 0.009)
+DEBUG:eden.model:iteration: (2/5) 50/60 score (roc_auc): 0.993 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (3/5) 50/60 score (roc_auc): 0.992 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (4/5) 50/60 score (roc_auc): 0.991 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (5/5) 50/60 score (roc_auc): 0.993 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (1/5) 51/60 score (roc_auc): 0.995 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (2/5) 51/60 score (roc_auc): 0.995 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (3/5) 51/60 score (roc_auc): 0.995 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (4/5) 51/60 score (roc_auc): 0.995 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (5/5) 51/60 score (roc_auc): 0.946 (0.972 +- 0.013)
+DEBUG:eden.model:iteration: (1/5) 52/60 score (roc_auc): 0.990 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (2/5) 52/60 score (roc_auc): 0.992 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (3/5) 52/60 score (roc_auc): 0.736 (0.829 +- 0.046)
+DEBUG:eden.model:iteration: (4/5) 52/60 score (roc_auc): 0.992 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (5/5) 52/60 score (roc_auc): 0.992 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (1/5) 53/60 score (roc_auc): 0.993 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (2/5) 53/60 score (roc_auc): 0.993 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (3/5) 53/60 score (roc_auc): 0.992 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (4/5) 53/60 score (roc_auc): 0.993 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (5/5) 53/60 score (roc_auc): 0.993 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (1/5) 54/60 score (roc_auc): 0.994 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (2/5) 54/60 score (roc_auc): 0.994 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (3/5) 54/60 score (roc_auc): 0.994 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (4/5) 54/60 score (roc_auc): 0.994 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (5/5) 54/60 score (roc_auc): 0.994 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (1/5) 55/60 score (roc_auc): 0.982 (0.993 +- 0.006)
+DEBUG:eden.model:iteration: (2/5) 55/60 score (roc_auc): 0.993 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (3/5) 55/60 score (roc_auc): 0.984 (0.996 +- 0.006)
+DEBUG:eden.model:iteration: (4/5) 55/60 score (roc_auc): 0.992 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (5/5) 55/60 score (roc_auc): 0.992 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (1/5) 56/60 score (roc_auc): 0.992 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (2/5) 56/60 score (roc_auc): 0.990 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (3/5) 56/60 score (roc_auc): 0.990 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (4/5) 56/60 score (roc_auc): 0.983 (0.993 +- 0.005)
+DEBUG:eden.model:iteration: (5/5) 56/60 score (roc_auc): 0.993 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (1/5) 57/60 score (roc_auc): 0.984 (0.996 +- 0.006)
+DEBUG:eden.model:iteration: (2/5) 57/60 score (roc_auc): 0.996 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (3/5) 57/60 score (roc_auc): 0.668 (0.769 +- 0.050)
+DEBUG:eden.model:iteration: (4/5) 57/60 score (roc_auc): 0.996 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (5/5) 57/60 score (roc_auc): 0.996 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (1/5) 58/60 score (roc_auc): 0.996 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (2/5) 58/60 score (roc_auc): 0.989 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (3/5) 58/60 score (roc_auc): 0.994 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (4/5) 58/60 score (roc_auc): 0.853 (0.917 +- 0.032)
+DEBUG:eden.model:iteration: (5/5) 58/60 score (roc_auc): 0.996 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (1/5) 59/60 score (roc_auc): 0.993 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (2/5) 59/60 score (roc_auc): 0.989 (0.998 +- 0.004)
+DEBUG:eden.model:iteration: (3/5) 59/60 score (roc_auc): 0.995 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (4/5) 59/60 score (roc_auc): 0.992 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (5/5) 59/60 score (roc_auc): 0.995 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (1/5) 60/60 score (roc_auc): 0.894 (0.944 +- 0.025)
+DEBUG:eden.model:iteration: (2/5) 60/60 score (roc_auc): 0.993 (0.998 +- 0.003)
+DEBUG:eden.model:iteration: (3/5) 60/60 score (roc_auc): 0.995 (0.999 +- 0.002)
+DEBUG:eden.model:iteration: (4/5) 60/60 score (roc_auc): 0.994 (0.999 +- 0.003)
+DEBUG:eden.model:iteration: (5/5) 60/60 score (roc_auc): 0.995 (0.999 +- 0.002)
+INFO:eden.model:Saved current best model in dat1/6/stem_model
+
+	Model parameters:
+
+Pre_processor:
+energy_range: 6
+   max_num: 6
+max_num_subopts: 106
+
+Vectorizer:
+complexity: 2
+
+Estimator:
+     alpha: 1e-07
+      eta0: 0.01
+  l1_ratio: 0.531689110882
+learning_rate: optimal
+      loss: log
+    n_iter: 66
+    n_jobs: 4
+   penalty: elasticnet
+   power_t: 0.33371193268
+INFO:eden.model:
+Parameters:
+
+	Model parameters:
+
+Pre_processor:
+energy_range: 6
+   max_num: 6
+max_num_subopts: 106
+
+Vectorizer:
+complexity: 2
+
+Estimator:
+     alpha: 1e-07
+      eta0: 0.01
+  l1_ratio: 0.531689110882
+learning_rate: optimal
+      loss: log
+    n_iter: 66
+    n_jobs: 4
+   penalty: elasticnet
+   power_t: 0.33371193268
+
+Classifier:
+SGDClassifier(alpha=1e-07, average=True, class_weight='auto', epsilon=0.1,
+       eta0=0.01, fit_intercept=True, l1_ratio=0.53168911088218429,
+       learning_rate='optimal', loss='log', n_iter=66, n_jobs=4,
+       penalty='elasticnet', power_t=0.33371193267990013,
+       random_state=None, shuffle=True, verbose=0, warm_start=False)
+
+Data:
+Instances: 1065 ; Features: 1048577 with an avg of 434 features per instance
+
+Predictive performace estimate:
+             precision    recall  f1-score   support
+
+         -1       0.97      0.99      0.98       852
+          1       0.97      0.89      0.93       213
+
+avg / total       0.97      0.97      0.97      1065
+
+ACC: 0.974
+FSC: 0.931
+APR: 0.991
+ROC: 0.998
+
+Parameters:
+
+	Model parameters:
+
+Pre_processor:
+energy_range: 6
+   max_num: 6
+max_num_subopts: 106
+
+Vectorizer:
+complexity: 2
+
+Estimator:
+     alpha: 1e-07
+      eta0: 0.01
+  l1_ratio: 0.531689110882
+learning_rate: optimal
+      loss: log
+    n_iter: 66
+    n_jobs: 4
+   penalty: elasticnet
+   power_t: 0.33371193268
+
+Classifier:
+SGDClassifier(alpha=1e-07, average=True, class_weight='auto', epsilon=0.1,
+       eta0=0.01, fit_intercept=True, l1_ratio=0.53168911088218429,
+       learning_rate='optimal', loss='log', n_iter=66, n_jobs=4,
+       penalty='elasticnet', power_t=0.33371193267990013,
+       random_state=None, shuffle=True, verbose=0, warm_start=False)
+
+Data:
+Instances: 1065 ; Features: 1048577 with an avg of 434 features per instance
+
+Predictive performace estimate:
+             precision    recall  f1-score   support
+
+         -1       0.97      0.99      0.98       852
+          1       0.97      0.89      0.93       213
+
+avg / total       0.97      0.97      0.97      1065
+
+ACC: 0.974
+FSC: 0.931
+APR: 0.991
+ROC: 0.998
+RSS: 24.46
+avg RSS: 0.022971
